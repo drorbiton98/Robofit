@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>RoboFIT</title>
+        <link  rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/result.css')}}">
+    </head>
+
+    <body>
+        <header>
+            <ul>
+                <li class="header-button">Your Result</li>
+                <li class="logo">
+                    <image
+                    srcset="{{ url_for('static', filename='images/logo-100.png')}} 1080w,
+                            {{ url_for('static', filename='images/logo-200.png')}} 1340w"
+                    sizes="(max-width: 1340px) 1080px,
+                           1352px"
+                    src="{{ url_for('static', filename='images/logo-200.png')}}"
+                    alt="RoboFIT Logo">
+                </li>
+                <a href="/"><li class="header-button try-again">Let's Try Again!</li></a>
+            </ul>
+        </header>
+
+        <main>
+            <div class="main-body">
+                <h1>This is our recommendation:</h1>
+                <p>{{answer}}</p>
+            </div>
+            <img src="{{ url_for('static', filename='images/sun-clouds.png')}}" alt="Sun behind the clouds"> <!--add sizing features for different sizes-->
+        </main>
+    </body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>RoboFIT Men</title>
+        <link  rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css')}}">
+    </head>
+
+    <body>
+        <header>
+            <form action="result.html" method='post'>
+
+                <div class="city-button">
+                    <label for="city">Your City:</label>
+                    <input class="city" type="text" id="city" name="city">
+                </div>
+
+                <div class="bottom-buttons">
+                    <div class="button left-button">
+                        <label for="temp">Are you generally hot or cold?</label>
+                        <select id="temp" name="temp">
+                            <option value="hot">Hot</option>
+                            <option value="cold">Cold</option>
+                        </select>
+                    </div>
+                    
+                    <div class="button right-button">
+                        <label for="event">What event are you attending?</label>
+                        <select id="event" name="event">
+                            <option value="casual">Casual</option>
+                            <option value="sport">Sport</option>
+                            <option value="formal">Formal</option>
+                            <option value="elegant">Elegant</option>
+                            <option value="comfy">Comfy</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="submit">
+                    <image class="submit"
+                    srcset="{{ url_for('static', filename='images/logo-75.png')}} 800w,
+                            {{ url_for('static', filename='images/logo-100.png')}} 1080w,
+                            {{ url_for('static', filename='images/logo-200.png')}} 1352w"
+                    sizes="(max-width: 799px) 1352px,
+                        (max-width: 1079px) 800px,
+                        (max-width: 1351px) 1080px,
+                        1352px"
+                    src="{{ url_for('static', filename='images/logo-200.png')}}"
+                    alt="RoboFIT Logo">
+
+                    <input class="submit" type="submit" value="Let's Go!">
+                </div>
+            </form>
+        </header>
+
+        <main>
+            <div>
+                <h1>Hoodie or Shorts?</h1>
+                <p>Our goal is to help you find the perfect fit your current weather, no more shivering or carrying excess sweaters.</p>
+            </div>
+            <image src="{{ url_for('static', filename='images/sun-clouds.png')}}" alt="Sun behind the clouds">
+        </main>
+    </body>
+
+</html>
